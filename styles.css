@@ -322,7 +322,7 @@ h1, h2, h3, h4 { line-height: 1.25; font-weight: 700; }
 /* ─── Topics ─────────────────────────────────────────────────── */
 .topics-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-columns: repeat(2, 1fr);
   gap: 1.25rem;
 }
 
@@ -789,6 +789,7 @@ a:hover { color: var(--accent); }
   .section { padding: 3.5rem 0; }
   .container { padding: 0 1.25rem; }
 
+  .topics-grid { grid-template-columns: 1fr; }
   .schedule-container { grid-template-columns: 1fr; }
   .footer-inner { grid-template-columns: 1fr; }
 
