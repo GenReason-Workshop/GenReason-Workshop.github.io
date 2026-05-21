@@ -274,6 +274,7 @@ h1, h2, h3, h4 { line-height: 1.25; font-weight: 700; }
   color: var(--text-secondary);
   font-size: 1.05rem;
   line-height: 1.8;
+  text-align: justify;
 }
 
 /* Submission guidelines intro */
