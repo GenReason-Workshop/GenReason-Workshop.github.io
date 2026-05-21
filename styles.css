@@ -446,12 +446,16 @@ h1, h2, h3, h4 { line-height: 1.25; font-weight: 700; }
 
 /* ─── Organizers ─────────────────────────────────────────────── */
 .organizers-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 1.25rem;
+  max-width: 860px;
+  margin: 0 auto;
 }
 
 .organizer-card {
+  flex: 0 0 180px;
   padding: 1.5rem 1rem;
 }
 
