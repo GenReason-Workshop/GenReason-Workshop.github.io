@@ -125,30 +125,30 @@ h1, h2, h3, h4 { line-height: 1.25; font-weight: 700; }
   justify-content: center;
   padding: 7rem 2rem 5rem;
   overflow: hidden;
-  background: linear-gradient(140deg, #1e1b4b 0%, #2e1065 35%, #4c1d95 70%, #5b21b6 100%);
+  background: url('assets/pattyjansen-sydney-opera-house-354375_1920.jpg') center/cover no-repeat;
   color: #fff;
 }
 
-/* Subtle grid pattern */
+/* Dark overlay for text readability */
 .hero::before {
   content: '';
   position: absolute;
   inset: 0;
-  background-image:
-    linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px);
-  background-size: 60px 60px;
+  background: linear-gradient(
+    to bottom,
+    rgba(10, 5, 30, 0.62) 0%,
+    rgba(15, 5, 40, 0.55) 60%,
+    rgba(10, 5, 30, 0.70) 100%
+  );
   pointer-events: none;
 }
 
-/* Radial glows */
+/* Subtle purple color grade to tie into site palette */
 .hero::after {
   content: '';
   position: absolute;
   inset: 0;
-  background:
-    radial-gradient(ellipse 60% 55% at 75% 25%, rgba(124,58,237,0.35) 0%, transparent 60%),
-    radial-gradient(ellipse 50% 45% at 20% 75%, rgba(109,40,217,0.25) 0%, transparent 55%);
+  background: radial-gradient(ellipse 70% 50% at 50% 0%, rgba(91,33,182,0.20) 0%, transparent 70%);
   pointer-events: none;
 }
 
