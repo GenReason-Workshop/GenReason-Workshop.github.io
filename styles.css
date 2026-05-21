@@ -446,18 +446,22 @@ h1, h2, h3, h4 { line-height: 1.25; font-weight: 700; }
 
 /* ─── Organizers ─────────────────────────────────────────────── */
 .organizers-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(8, minmax(0, 1fr));
   gap: 1.25rem;
   max-width: 860px;
   margin: 0 auto;
 }
 
 .organizer-card {
-  flex: 0 0 180px;
+  grid-column: span 2;
   padding: 1.5rem 1rem;
 }
+
+/* Center last 3 cards in row 2 */
+.organizer-card:nth-child(5) { grid-column: 2 / span 2; }
+.organizer-card:nth-child(6) { grid-column: 4 / span 2; }
+.organizer-card:nth-child(7) { grid-column: 6 / span 2; }
 
 .organizer-card:hover { transform: translateY(-3px); }
 
