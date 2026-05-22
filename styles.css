@@ -385,8 +385,10 @@ h1, h2, h3, h4 { line-height: 1.25; font-weight: 700; }
 /* ─── Speakers ───────────────────────────────────────────────── */
 .speakers-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 1.25rem;
+  max-width: 720px;
+  margin: 0 auto;
 }
 
 /* Shared base for speaker and organizer cards */
