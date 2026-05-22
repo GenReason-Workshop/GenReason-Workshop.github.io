@@ -541,6 +541,12 @@ h1, h2, h3, h4 { line-height: 1.25; font-weight: 700; }
   margin-top: 0.15rem;
 }
 
+.schedule-note-inline {
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: var(--text-muted);
+}
+
 .highlight-activity {
   font-size: 0.8rem;
   color: var(--primary);
