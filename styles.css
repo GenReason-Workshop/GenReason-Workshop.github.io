@@ -660,6 +660,7 @@ h1, h2, h3, h4 { line-height: 1.25; font-weight: 700; }
   color: var(--text-secondary);
   line-height: 1.7;
   padding: 1rem 1.25rem;
+  margin: 0 1.25rem 1.25rem;
   background: var(--accent-faint);
   border-radius: 0.625rem;
   border-left: 3px solid var(--primary);
