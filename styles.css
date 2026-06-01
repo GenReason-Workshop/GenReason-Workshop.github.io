@@ -187,6 +187,19 @@ h1, h2, h3, h4 { line-height: 1.25; font-weight: 700; }
   font-weight: 500;
   margin-bottom: 1.25rem;
   color: rgba(255,255,255,0.8);
+  text-wrap: balance;
+}
+
+.hero-tagline {
+  font-size: clamp(1.05rem, 2.2vw, 1.35rem);
+  font-weight: 500;
+  line-height: 1.55;
+  margin-bottom: 1.5rem;
+  color: rgba(255,255,255,0.85);
+}
+
+@media (max-width: 720px) {
+  .hero-tagline br { display: none; }
 }
 
 .hero-subtitle {
@@ -258,6 +271,7 @@ h1, h2, h3, h4 { line-height: 1.25; font-weight: 700; }
   max-width: 600px;
   margin-left: auto;
   margin-right: auto;
+  text-wrap: balance;
 }
 
 .section-header {
@@ -266,6 +280,10 @@ h1, h2, h3, h4 { line-height: 1.25; font-weight: 700; }
 
 /* Utility: section-subtitle with top-margin variant (used in schedule) */
 .section-subtitle--top { margin-top: 0.75rem; }
+.section-subtitle--wide { max-width: none; white-space: nowrap; }
+@media (max-width: 720px) {
+  .section-subtitle--wide { white-space: normal; }
+}
 
 /* About body text */
 .about-body {
@@ -440,6 +458,7 @@ h1, h2, h3, h4 { line-height: 1.25; font-weight: 700; }
   font-size: 0.825rem;
   color: var(--text-secondary);
   margin-bottom: 0.25rem;
+  text-wrap: balance;
 }
 
 .title {
@@ -474,6 +493,7 @@ h1, h2, h3, h4 { line-height: 1.25; font-weight: 700; }
   font-size: 0.775rem;
   color: var(--text-secondary);
   line-height: 1.4;
+  text-wrap: balance;
 }
 
 /* ─── Schedule ───────────────────────────────────────────────── */
@@ -672,11 +692,75 @@ h1, h2, h3, h4 { line-height: 1.25; font-weight: 700; }
 
 .submission-note strong { color: var(--text); }
 
+/* Simplified submission block */
+.submission-simple {
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.submission-lead {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin-bottom: 1.75rem;
+  text-align: left;
+  text-wrap: pretty;
+}
+
+.dates-inline {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 0.75rem 0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.75rem;
+}
+
+.dates-inline li {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 0.625rem;
+  padding: 0.75rem 0.85rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  text-align: left;
+}
+
+.dates-inline .label {
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.dates-inline .date {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text);
+  white-space: nowrap;
+}
+
+.submission-foot {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  font-style: italic;
+  margin: 0;
+  text-align: left;
+}
+
+@media (max-width: 720px) {
+  .dates-inline { grid-template-columns: repeat(2, 1fr); }
+  .dates-inline .date { white-space: normal; }
+}
+
 /* ─── Footer ─────────────────────────────────────────────────── */
 .footer {
-  background: #0f0a1e;
-  color: rgba(255,255,255,0.7);
+  background: var(--bg-subtle);
+  color: var(--text-secondary);
   padding: 3.5rem 0 2rem;
+  border-top: 1px solid var(--border);
 }
 
 .footer-inner {
@@ -687,7 +771,7 @@ h1, h2, h3, h4 { line-height: 1.25; font-weight: 700; }
 }
 
 .footer h3 {
-  color: #fff;
+  color: var(--primary);
   font-size: 0.875rem;
   font-weight: 700;
   letter-spacing: 0.06em;
@@ -698,16 +782,23 @@ h1, h2, h3, h4 { line-height: 1.25; font-weight: 700; }
 .footer p {
   font-size: 0.875rem;
   line-height: 1.7;
-  color: rgba(255,255,255,0.5);
+  color: var(--text-secondary);
 }
+
+.footer a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.footer a:hover { text-decoration: underline; }
 
 .footer-bottom {
   display: flex;
   justify-content: center;
   padding-top: 2rem;
-  border-top: 1px solid rgba(255,255,255,0.08);
+  border-top: 1px solid var(--border);
   font-size: 0.8rem;
-  color: rgba(255,255,255,0.35);
+  color: var(--text-muted);
 }
 
 /* ─── Go-to-Top ──────────────────────────────────────────────── */
